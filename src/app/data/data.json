@@ -1,0 +1,23 @@
+{
+    "cards": [
+      {
+        "title": "Impresión",
+        "subtitle": "Impresiones a color y blanco y negro, textos e imágenes, documentos y presentaciones.",
+        "text": "Envíanos tus archivos por WhatsApp o correo electrónico para una entrega rápida y confiable.",
+        "pathImagen": "/print_icon.svg"
+      },
+      {
+        "title": "Escaneo de documentos",
+        "subtitle": "Digitalización en formato PDF y JPEG",
+        "text": "Tráenos tus documentos en persona. Garantizamos la máxima calidad y confidencialidad. El documento digitalizado te lo enviamos de vuelta por correo electrónico o WhatsApp.",
+        "pathImagen": "/scanner_icon.svg"
+      },
+      {
+        "title": "Redacción de currículos",
+        "subtitle": "En formato físico o PDF, diferentes diseños.",
+        "text": "Creamos currículums a la medida de tu perfil y objetivos. Recibe tu currículum en formato físico y PDF, listo para impresionar a cualquier reclutador. Elige entre una variedad de diseños modernos y elegantes.",
+        "pathImagen": "/cv_icon.svg"
+      }
+    ]
+  }
+  
