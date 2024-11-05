@@ -10,13 +10,13 @@ const Services = () => {
         <h2 className="text-3xl font-bold text-sky-900 mb-6">
           Nuestros Servicios
         </h2>
-        <p className="text-sky-800 mb-4">
-          We offer a variety of professional services to complement our product
-          range. From expert consultations to efficient delivery and
-          installation, we're here to ensure your complete satisfaction.
+        <p className="text-sky-800 mb-6">
+          Ofrecemos una gama de servicios especializados para complementar nuestros productos.
+          Desde la atención personalizada hasta la asistencia técnica,
+          estamos aquí para asegurar su completa satisfacción en cada etapa.
         </p>
 
-        <div className="flex justify-evenly">
+        <div className="flex justify-evenly flex-wrap">
           {data.cards.map((card, index) => (
             <Card
               key={index}
@@ -27,9 +27,9 @@ const Services = () => {
             />
           ))}
         </div>
-        <Button className="bg-sky-500 text-white hover:bg-sky-600">
+        {/* <Button className="bg-sky-500 text-white hover:bg-sky-600">
           Learn More
-        </Button>
+        </Button> */}
       </div>
     </section>
   );
