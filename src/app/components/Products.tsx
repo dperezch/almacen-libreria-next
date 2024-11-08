@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import React from "react";
+import logos from "../data/logos.json";
 
 const Products = () => {
   return (
@@ -20,6 +19,16 @@ const Products = () => {
         {/* <Button className="bg-yellow-400 text-sky-900 hover:bg-yellow-500">
           Shop Now
         </Button> */}
+        <div className="hidden md:flex flex-row justify-evenly mt-6">
+          {logos.logos.map((logo, index) => (
+            <img
+              className="w-20 h-20 rounded-full"
+              key={index}
+              src={logo.url}
+              alt={`logo ${logo.name}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

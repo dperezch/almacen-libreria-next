@@ -1,0 +1,52 @@
+{
+    "logos": [
+        {
+            "name": "ambrosoli",
+            "url": "/logos/logo_ambrosoli.png"
+        },
+        {
+            "name": "nestle",
+            "url": "/logos/logo_nestle.png"
+        },
+        {
+            "name": "evercrisp",
+            "url": "/logos/logo_evercrisp.png"
+        },
+        {
+            "name": "savory",
+            "url": "/logos/logo_savory.png"
+        },
+        {
+            "name": "carozzi",
+            "url": "/logos/logo_carozzi.png"
+        },
+        {
+            "name": "sj",
+            "url": "/logos/logo_sj.png"
+        },
+        {
+            "name": "winter",
+            "url": "/logos/logo_winter.png"
+        },
+        {
+            "name": "rda",
+            "url": "/logos/logo_rda.png"
+        },
+        {
+            "name": "ariztia",
+            "url": "/logos/logo_ariztia.png"
+        },
+        {
+            "name": "montina",
+            "url": "/logos/logo_montina.png"
+        },
+        {
+            "name": "cc",
+            "url": "/logos/logo_cc.png"
+        },
+        {
+            "name": "ccu",
+            "url": "/logos/logo_ccu.png"
+        }
+    ]
+}
