@@ -9,7 +9,7 @@
     {
       "title": "Fotocopias",
       "subtitle": "A color y en blanco y negro",
-      "text": "Realizamos fotocopias para documentos y carnet",
+      "text": "Realizamos fotocopias para documentos y carnet.",
       "pathImagen": "/copy_machine_icon.svg"
     },
     {
@@ -23,6 +23,12 @@
       "subtitle": "En formato físico o PDF, diferentes diseños.",
       "text": "Creamos currículums a la medida de tu perfil y objetivos. Recibe tu currículum en formato físico y PDF, listo para impresionar a cualquier reclutador. Elige entre una variedad de diseños modernos y elegantes.",
       "pathImagen": "/cv_icon.svg"
+    },
+    {
+      "title": "Certificados",
+      "subtitle": "Certificados de Nacimiento, Educación(Mineduc), Cartola Hogar, Antecedentes, Hoja de vida Conductor, Fonasa, AFP.",
+      "text": "¿Evitar filas y papeleo? ¡Claro! Con nuestro servicio, obtendrás tus certificados de manera rápida y sin complicaciones. Solo dinos qué necesitas, y lo tendrás en tus manos.  Dependiendo del caso necesitaremos tu rut, clave única o clave de AFP.",
+      "pathImagen": "/document_icon.svg"
     },
     {
       "title": "Búsqueda de Imágenes",

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Clock } from "lucide-react";
 import React from "react";
 
 const Footer = () => {
@@ -8,12 +9,14 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">About Us</h3>
-            <p className="text-sky-200">
-              We are a leading provider of quality products and services,
-              committed to customer satisfaction and excellence in everything we
-              do.
-            </p>
+            <h3 className="text-xl font-semibold text-sky-200 mb-2 flex items-center">
+              <Clock className="mr-2 text-sky-200" />
+              Horario de atención
+            </h3>
+            <ul className="space-y-1 text-sky-200">
+              <li>Lunes - Viernes: 9:00 AM - 2:00 PM / 4:30 PM - 9:00 PM</li>
+              <li>Sábado, Domingo y Festivos: 9:00 AM - 2:00 PM</li>
+            </ul>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
@@ -58,7 +61,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-sky-800 text-center text-sky-200">
-          © 2024 Your Store Name. All rights reserved.
+          © 2024 Almacén y Librería La Familia. All rights reserved.
         </div>
       </div>
     </footer>
