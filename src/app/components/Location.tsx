@@ -2,7 +2,7 @@ import { Clock, Mail, MapPin, Phone } from "lucide-react";
 
 const Location = () => {
   return (
-    <section className="py-12 bg-sky-100">
+    <section className="py-12 bg-sky-100" id="ubicacion">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-sky-900 mb-6">
           Nuestra ubicación

@@ -3,7 +3,7 @@ import React from "react";
 
 const Products = () => {
   return (
-    <section className="py-12 bg-sky-100">
+    <section className="py-12 bg-sky-100" id="productos">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-sky-900 mb-6">
           Nuestros productos

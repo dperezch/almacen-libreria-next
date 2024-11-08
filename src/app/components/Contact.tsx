@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Loader2, MessageCircle } from "lucide-react";
 import React, { useState } from "react";
+import Link from "next/link";
 
 const FormSchema = z.object({
   username: z.string().min(2, {
@@ -184,9 +185,17 @@ const Contact = () => {
               </p>
             </div>
             <div className="flex items-center space-x-2">
-              <Button className="bg-yellow-400 text-sky-900 hover:bg-yellow-500">
-                <MessageCircle />
-                Enviar WhatsApp
+              <Button
+                asChild
+                className="bg-yellow-400 text-sky-900 hover:bg-yellow-500"
+              >
+                <Link
+                  href="https://api.whatsapp.com/send?phone=56938827045&text=Hola,%20te%20contacto%20desde%20la%20página%20web"
+                  target="_blank"
+                >
+                  <MessageCircle />
+                  Enviar WhatsApp
+                </Link>
               </Button>
             </div>
           </div>

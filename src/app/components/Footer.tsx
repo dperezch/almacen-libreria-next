@@ -19,7 +19,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+            <h3 className="text-xl font-bold mb-4">Enlaces directos</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#" className="text-sky-200 hover:text-yellow-400">
@@ -27,35 +27,59 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sky-200 hover:text-yellow-400">
-                  Products
+                <a
+                  href="#productos"
+                  className="text-sky-200 hover:text-yellow-400"
+                >
+                  Productos
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sky-200 hover:text-yellow-400">
-                  Services
+                <a
+                  href="#servicios"
+                  className="text-sky-200 hover:text-yellow-400"
+                >
+                  Servicios
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sky-200 hover:text-yellow-400">
-                  Contact
+                <a
+                  href="#ubicacion"
+                  className="text-sky-200 hover:text-yellow-400"
+                >
+                  Ubicación
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contacto"
+                  className="text-sky-200 hover:text-yellow-400"
+                >
+                  Contacto
                 </a>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="text-xl font-bold mb-4">Newsletter</h3>
-            <p className="text-sky-200 mb-2">
-              Stay updated with our latest offers and news.
+            <h3 className="text-xl font-bold mb-4 text-gray-400">
+              Próximamente
+            </h3>
+            <h3 className="text-xl font-bold mb-4 text-gray-500">Newsletter</h3>
+            <p className="text-gray-500 mb-2">
+              Manténgase actualizado con nuestras últimas ofertas y noticias.
             </p>
             <form className="flex">
               <Input
+                disabled
                 type="email"
                 placeholder="Your Email"
                 className="rounded-r-none"
               />
-              <Button className="bg-yellow-400 text-sky-900 hover:bg-yellow-500 rounded-l-none">
-                Subscribe
+              <Button
+                disabled
+                className="bg-yellow-400 text-sky-900 hover:bg-yellow-500 rounded-l-none"
+              >
+                Suscribirme
               </Button>
             </form>
           </div>

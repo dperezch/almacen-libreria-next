@@ -5,15 +5,16 @@ import data from "../data/data.json";
 
 const Services = () => {
   return (
-    <section className="py-12 bg-white">
+    <section className="py-12 bg-white" id="servicios">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-sky-900 mb-6">
           Nuestros Servicios
         </h2>
         <p className="text-sky-800 mb-6">
-          Ofrecemos una gama de servicios especializados para complementar nuestros productos.
-          Desde la atención personalizada hasta la asistencia técnica,
-          estamos aquí para asegurar su completa satisfacción en cada etapa.
+          Ofrecemos una gama de servicios especializados para complementar
+          nuestros productos. Desde la atención personalizada hasta la
+          asistencia técnica, estamos aquí para asegurar su completa
+          satisfacción en cada etapa.
         </p>
 
         <div className="flex justify-evenly flex-wrap">
