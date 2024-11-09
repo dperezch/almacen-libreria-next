@@ -3,8 +3,9 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: "Almacén Librería La Familia",
-  description: "Almacén y Librería La Familia",
+  title: "Almacén La Familia",
+  description:
+    "Almacén y Librería La Familia, abarrotes, congelados, bebidas, servicios de impresión.",
 };
 
 export default function RootLayout({
