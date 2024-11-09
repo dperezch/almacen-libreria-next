@@ -56,6 +56,8 @@ const Contact = () => {
       Mensaje: ${data.text}`,
     };
 
+    console.log("body 1", formBody);
+
     const formBody2 = {
       from: process.env.NEXT_PUBLIC_MAILER_USER,
       to: data.email,
@@ -63,6 +65,8 @@ const Contact = () => {
       text: `Estimado/a ${data.username}, hemos recibido tu mensaje de contacto. Te responderemos a la brevedad posible. Gracias por tu tiempo. <n />
       Atte. Almacén y Librería La Familia.`,
     };
+
+    console.log("body 2", formBody2);
 
     const response = await fetch("/api/send", {
       method: "POST",
