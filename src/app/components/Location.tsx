@@ -27,7 +27,7 @@ const Location = () => {
             <div className="flex items-center space-x-2">
               <Mail className="text-sky-900" />
               <span className="text-sky-800">
-                almacenlafamilia3347@gmail.com
+                contacto@almacenlafamilia.com
               </span>
             </div>
           </div>
