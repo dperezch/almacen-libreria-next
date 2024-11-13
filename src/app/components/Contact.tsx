@@ -52,7 +52,7 @@ const Contact = () => {
       from: process.env.NEXT_PUBLIC_MAILER_USER,
       to: process.env.NEXT_PUBLIC_MAILER_TO,
       subject: data.subject,
-      text: `Email enviado por ${data.email} desde página web <n />
+      text: `Email enviado por ${data.username}, correo: ${data.email}, desde página web <n />
       Mensaje: ${data.text}`,
     };
 
