@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "Almacén La Familia",
@@ -21,6 +21,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Toaster />
       </body>
+      <GoogleAnalytics gaId="G-NRJCB3M3W9" />
     </html>
   );
 }
