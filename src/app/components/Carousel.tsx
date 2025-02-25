@@ -2,11 +2,11 @@
 
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import useWindowSize from "../hooks/useWindowsSize";
 
 const Carousel = () => {
-  const size = useWindowSize()
+  const size = useWindowSize();
   const esPantallaPequena = size.width !== undefined && size.width <= 768;
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -16,6 +16,7 @@ const Carousel = () => {
     "/3large.png",
     "/4large.png",
     "/5large.png",
+    "/6large.png",
   ];
 
   const carouselImagesSmall = [
@@ -24,7 +25,8 @@ const Carousel = () => {
     "/3small.png",
     "/4small.png",
     "/5small.png",
-  ]
+    "/6small.png",
+  ];
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
@@ -35,16 +37,24 @@ const Carousel = () => {
       (prev) => (prev - 1 + carouselImages.length) % carouselImages.length
     );
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="relative h-[500px] overflow-hidden">
-
-      {
-        esPantallaPequena ? (
-          carouselImagesSmall.map((img, index) => (
+      {esPantallaPequena
+        ? carouselImagesSmall.map((img, index) => (
             <div
               key={index}
-              className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ${index === currentSlide ? "opacity-100" : "opacity-0"
-                }`}
+              className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ${
+                index === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
             >
               <img
                 src={img}
@@ -53,12 +63,12 @@ const Carousel = () => {
               />
             </div>
           ))
-        ) : (
-          carouselImages.map((img, index) => (
+        : carouselImages.map((img, index) => (
             <div
               key={index}
-              className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ${index === currentSlide ? "opacity-100" : "opacity-0"
-                }`}
+              className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ${
+                index === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
             >
               <img
                 src={img}
@@ -66,9 +76,7 @@ const Carousel = () => {
                 className="w-full h-full object-contain"
               />
             </div>
-          ))
-        )
-      }
+          ))}
 
       <Button
         variant="outline"

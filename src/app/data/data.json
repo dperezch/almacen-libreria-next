@@ -41,6 +41,12 @@
       "subtitle": "Para trabajos escolares.",
       "text": "Encontramos y preparamos imágenes educativas y en diferentes tamaños para todos los proyectos y necesidades escolares de tus hij@s. Envíanos tu solicitud por WhatsApp o correo electrónico para una entrega rápida y personalizada.",
       "pathImagen": "/images_icon.svg"
+    },
+    {
+      "title": "Wi-Fi Gratuito",
+      "subtitle": "Conexión rápida para tus archivos e imágenes",
+      "text": "¿Necesitas enviar o recibir archivos y no cuentas con internet? ¡No hay problema! Conéctate a nuestro Wi-Fi gratuito y envía o recibe tus documentos e imágenes sin complicaciones. Pide la habilitación de la red en recepción y disfruta de una conexión rápida y confiable.",
+      "pathImagen": "/wifi_icon.svg"
     }
   ]
 }
