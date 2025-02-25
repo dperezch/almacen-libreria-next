@@ -28,6 +28,10 @@ const Carousel = () => {
     "/6small.png",
   ];
 
+  const getCarouselImages = () => {
+    return esPantallaPequena ? carouselImagesSmall : carouselImages;
+  };
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
   };
@@ -38,50 +42,39 @@ const Carousel = () => {
     );
   };
 
+  const goToSlide = (slideIndex: any) => {
+    setCurrentSlide(slideIndex);
+  };
+
+  // Efecto para cambiar automáticamente las imágenes
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
     }, 5000);
-
+    // Limpiar el intervalo cuando el componente se desmonte para evitar fugas de memoria
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="relative h-[500px] overflow-hidden">
-      {esPantallaPequena
-        ? carouselImagesSmall.map((img, index) => (
-            <div
-              key={index}
-              className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ${
-                index === currentSlide ? "opacity-100" : "opacity-0"
-              }`}
-            >
-              <img
-                src={img}
-                alt={`Slide ${index + 1}`}
-                className="w-full h-full object-contain"
-              />
-            </div>
-          ))
-        : carouselImages.map((img, index) => (
-            <div
-              key={index}
-              className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ${
-                index === currentSlide ? "opacity-100" : "opacity-0"
-              }`}
-            >
-              <img
-                src={img}
-                alt={`Slide ${index + 1}`}
-                className="w-full h-full object-contain"
-              />
-            </div>
-          ))}
-
+      {getCarouselImages().map((image, index) => (
+        <div
+          key={index}
+          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ${
+            index === currentSlide ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <img
+            src={image}
+            alt={`Slide ${index + 1}`}
+            className="w-full h-full object-contain"
+          />
+        </div>
+      ))}
       <Button
         variant="outline"
         size="icon"
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/50"
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/50 z-10"
         onClick={prevSlide}
       >
         <ChevronLeft className="h-6 w-6" />
@@ -89,11 +82,26 @@ const Carousel = () => {
       <Button
         variant="outline"
         size="icon"
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/50"
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/50 z-10"
         onClick={nextSlide}
       >
         <ChevronRight className="h-6 w-6" />
       </Button>
+      {/* Nuevos botones de navegación */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10 flex space-x-2">
+        {getCarouselImages().map((_, index) => (
+          <button
+            key={index}
+            className={`rounded-full w-3 h-3 transition-colors duration-300 ${
+              index === currentSlide
+                ? "bg-blue-500"
+                : "bg-gray-300 hover:bg-gray-400"
+            }`}
+            onClick={() => goToSlide(index)}
+            aria-label={`Go to slide ${index + 1}`}
+          ></button>
+        ))}
+      </div>
     </div>
   );
 };
