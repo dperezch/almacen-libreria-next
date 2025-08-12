@@ -4,9 +4,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
-  title: "Almacén La Familia",
+  title: "Almacén y Librería La Familia, Calama, Chile.",
   description:
-    "Almacén y Librería La Familia, abarrotes, congelados, bebidas, servicios de impresión.",
+    "Almacén y Librería La Familia, abarrotes, congelados, bebidas, artículos de oficina, artículos escolares, artículos de librería, servicios de impresión, servicios de escaneado, fotocopias, plastificado, certificados laborales.  Estamos ubicados en la ciudad de Calama, Chile.",
 };
 
 export default function RootLayout({
