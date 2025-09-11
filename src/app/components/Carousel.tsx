@@ -11,6 +11,7 @@ const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const carouselImages = [
+    "/anilladolarge.png",
     "/sombrerolarge.png",
     "/heladolarge.png",
     "/1large.png",
@@ -22,6 +23,7 @@ const Carousel = () => {
   ];
 
   const carouselImagesSmall = [
+    "/anilladosmall.png",
     "/sombrerosmall.png",
     "/heladosmall.png",
     "/1small.png",
