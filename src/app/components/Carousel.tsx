@@ -3,13 +3,12 @@
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import React, { useState, useEffect } from "react";
-import useWindowSize from "../hooks/useWindowsSize";
+import Image from "next/image";
 
 const Carousel = () => {
-  const size = useWindowSize();
-  const esPantallaPequena = size.width !== undefined && size.width <= 768;
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // Arreglo para imágenes de escritorio
   const carouselImages = [
     "/anilladolarge.png",
     "/sombrerolarge.png",
@@ -22,6 +21,7 @@ const Carousel = () => {
     "/6large.png",
   ];
 
+  // Arreglo para imágenes de móvil con diseño diferente
   const carouselImagesSmall = [
     "/anilladosmall.png",
     "/sombrerosmall.png",
@@ -34,10 +34,6 @@ const Carousel = () => {
     "/6small.png",
   ];
 
-  const getCarouselImages = () => {
-    return esPantallaPequena ? carouselImagesSmall : carouselImages;
-  };
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
   };
@@ -48,35 +44,57 @@ const Carousel = () => {
     );
   };
 
-  const goToSlide = (slideIndex: any) => {
+  const goToSlide = (slideIndex: number) => {
     setCurrentSlide(slideIndex);
   };
 
-  // Efecto para cambiar automáticamente las imágenes
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
     }, 5000);
-    // Limpiar el intervalo cuando el componente se desmonte para evitar fugas de memoria
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="relative h-[500px] overflow-hidden">
-      {getCarouselImages().map((image, index) => (
-        <div
-          key={index}
-          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ${
-            index === currentSlide ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <img
-            src={image}
-            alt={`Slide ${index + 1}`}
-            className="w-full h-full object-contain"
-          />
-        </div>
-      ))}
+      {carouselImages.map((imageLarge, index) => {
+        const imageSmall = carouselImagesSmall[index];
+
+        return (
+          <div
+            key={index}
+            className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ${
+              index === currentSlide ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            {/* Versión para pantallas grandes (desktop) */}
+            <Image
+              src={imageLarge}
+              alt={`Slide ${index + 1} para escritorio`}
+              fill
+              style={{ objectFit: "contain" }}
+              priority={index === 0}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8/x8AAuMB8DtXNJsAAAAASUVORK5CYII="
+              className="hidden md:block" // Oculto en móvil, visible en desktop
+            />
+
+            {/* Versión para pantallas pequeñas (mobile) */}
+            <Image
+              src={imageSmall}
+              alt={`Slide ${index + 1} para móvil`}
+              fill
+              style={{ objectFit: "contain" }}
+              priority={index === 0}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8/x8AAuMB8DtXNJsAAAAASUVORK5CYII="
+              className="block md:hidden" // Visible en móvil, oculto en desktop
+            />
+          </div>
+        );
+      })}
+
+      {/* --- Controles de Navegación --- */}
       <Button
         variant="outline"
         size="icon"
@@ -93,9 +111,10 @@ const Carousel = () => {
       >
         <ChevronRight className="h-6 w-6" />
       </Button>
-      {/* Nuevos botones de navegación */}
+
+      {/* --- Puntos de Navegación --- */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10 flex space-x-2">
-        {getCarouselImages().map((_, index) => (
+        {carouselImages.map((_, index) => (
           <button
             key={index}
             className={`rounded-full w-3 h-3 transition-colors duration-300 ${
