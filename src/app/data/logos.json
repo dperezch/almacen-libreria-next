@@ -2,51 +2,51 @@
     "logos": [
         {
             "name": "ambrosoli",
-            "url": "/logos/logo_ambrosoli.png"
+            "url": "/logos/logo_ambrosoli.webp"
         },
         {
             "name": "nestle",
-            "url": "/logos/logo_nestle.png"
+            "url": "/logos/logo_nestle.webp"
         },
         {
             "name": "evercrisp",
-            "url": "/logos/logo_evercrisp.png"
+            "url": "/logos/logo_evercrisp.webp"
         },
         {
             "name": "savory",
-            "url": "/logos/logo_savory.png"
+            "url": "/logos/logo_savory.webp"
         },
         {
             "name": "carozzi",
-            "url": "/logos/logo_carozzi.png"
+            "url": "/logos/logo_carozzi.webp"
         },
         {
             "name": "sj",
-            "url": "/logos/logo_sj.png"
+            "url": "/logos/logo_sj.webp"
         },
         {
             "name": "winter",
-            "url": "/logos/logo_winter.png"
+            "url": "/logos/logo_winter.webp"
         },
         {
             "name": "rda",
-            "url": "/logos/logo_rda.png"
+            "url": "/logos/logo_rda.webp"
         },
         {
             "name": "ariztia",
-            "url": "/logos/logo_ariztia.png"
+            "url": "/logos/logo_ariztia.webp"
         },
         {
             "name": "montina",
-            "url": "/logos/logo_montina.png"
+            "url": "/logos/logo_montina.webp"
         },
         {
             "name": "cc",
-            "url": "/logos/logo_cc.png"
+            "url": "/logos/logo_cc.webp"
         },
         {
             "name": "ccu",
-            "url": "/logos/logo_ccu.png"
+            "url": "/logos/logo_ccu.webp"
         }
     ]
 }

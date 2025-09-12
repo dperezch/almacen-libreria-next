@@ -1,3 +1,4 @@
+import Image from "next/image";
 import logos from "../data/logos.json";
 
 const Products = () => {
@@ -16,17 +17,21 @@ const Products = () => {
           gama de abarrotes, artículos de librería y productos congelados para
           que siempre esté bien abastecido.
         </p>
-        {/* <Button className="bg-yellow-400 text-sky-900 hover:bg-yellow-500">
-          Shop Now
-        </Button> */}
         <div className="hidden md:flex flex-row justify-evenly mt-6">
           {logos.logos.map((logo, index) => (
-            <img
-              className="w-20 h-20 rounded-full"
+            <div
               key={index}
-              src={logo.url}
-              alt={`logo ${logo.name}`}
-            />
+              className="relative w-20 h-20 rounded-full overflow-hidden"
+            >
+              <Image
+                src={logo.url}
+                alt={`logo ${logo.name}`}
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                style={{ objectFit: "contain" }}
+                className="p-2"
+              />
+            </div>
           ))}
         </div>
       </div>

@@ -10,28 +10,28 @@ const Carousel = () => {
 
   // Arreglo para imágenes de escritorio
   const carouselImages = [
-    "/anilladolarge.png",
-    "/sombrerolarge.png",
-    "/heladolarge.png",
-    "/1large.png",
-    "/2large.png",
-    "/3large.png",
-    "/4large.png",
-    "/5large.png",
-    "/6large.png",
+    "/anilladolarge.webp",
+    "/sombrerolarge.webp",
+    "/heladolarge.webp",
+    "/1large.webp",
+    "/2large.webp",
+    "/3large.webp",
+    "/4large.webp",
+    "/5large.webp",
+    "/6large.webp",
   ];
 
   // Arreglo para imágenes de móvil con diseño diferente
   const carouselImagesSmall = [
-    "/anilladosmall.png",
-    "/sombrerosmall.png",
-    "/heladosmall.png",
-    "/1small.png",
-    "/2small.png",
-    "/3small.png",
-    "/4small.png",
-    "/5small.png",
-    "/6small.png",
+    "/anilladosmall.webp",
+    "/sombrerosmall.webp",
+    "/heladosmall.webp",
+    "/1small.webp",
+    "/2small.webp",
+    "/3small.webp",
+    "/4small.webp",
+    "/5small.webp",
+    "/6small.webp",
   ];
 
   const nextSlide = () => {
@@ -74,8 +74,7 @@ const Carousel = () => {
               fill
               style={{ objectFit: "contain" }}
               priority={index === 0}
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8/x8AAuMB8DtXNJsAAAAASUVORK5CYII="
+              /* placeholder="blur" */
               className="hidden md:block" // Oculto en móvil, visible en desktop
             />
 
@@ -86,8 +85,7 @@ const Carousel = () => {
               fill
               style={{ objectFit: "contain" }}
               priority={index === 0}
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8/x8AAuMB8DtXNJsAAAAASUVORK5CYII="
+              /* placeholder="blur" */
               className="block md:hidden" // Visible en móvil, oculto en desktop
             />
           </div>
