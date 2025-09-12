@@ -6,7 +6,7 @@ import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 export const metadata: Metadata = {
   title: "Almacén y Librería La Familia, Calama, Chile.",
   description:
-    "Almacén y Librería La Familia, abarrotes, congelados, bebidas, artículos de oficina, artículos escolares, artículos de librería, servicios de impresión, servicios de escaneado, fotocopias, plastificado, certificados laborales.  Estamos ubicados en la ciudad de Calama, Chile.",
+    "Almacén y Librería La Familia, abarrotes, congelados, bebidas, artículos de oficina, artículos escolares, artículos de librería, servicios de impresión, servicios de escaneado, fotocopias, plastificado, anillado, certificados laborales.  Estamos ubicados en la ciudad de Calama, Chile.",
 };
 
 export default function RootLayout({
